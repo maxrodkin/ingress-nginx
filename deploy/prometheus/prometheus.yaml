@@ -33,7 +33,7 @@ scrape_configs:
   static_configs:
     - targets: ['localhost:9090']
 
-- job_name: 'flask'
+- job_name: 'health'
   scrape_interval: 5s
   static_configs:
     - targets: ['flask-service.ingress-nginx.svc.cluster.local:5000']
