@@ -36,4 +36,4 @@ scrape_configs:
 - job_name: 'flask'
   scrape_interval: 5s
   static_configs:
-    - targets: ['flask-service.ingress-nginx.svc.cluster.local:5000/metrics']
+    - targets: ['flask-service.ingress-nginx.svc.cluster.local:5000']
