@@ -29,6 +29,7 @@ spec:
               name: data
             - mountPath: /etc/grafana/grafana.ini
               name: grafana-ini
+              subPath: grafana.ini
       restartPolicy: Always
       volumes:
         - emptyDir: {}
