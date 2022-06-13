@@ -28,12 +28,12 @@ spec:
             - mountPath: /var/lib/grafana
               name: data
             - mountPath: /etc/grafana/grafana.ini
-              name: grafana.ini
+              name: grafana_ini
       restartPolicy: Always
       volumes:
         - emptyDir: {}
           name: data
-        - name: grafana.ini
+        - name: grafana_ini
           configMap:
             name: grafana.ini
 
