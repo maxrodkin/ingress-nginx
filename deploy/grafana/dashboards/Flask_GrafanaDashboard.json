@@ -24,14 +24,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "7sj2MDj7z"
+        "uid": "xLDTsaCnk"
       },
       "fieldConfig": {
         "defaults": {
@@ -89,7 +89,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 1,
+      "id": 2,
       "options": {
         "legend": {
           "calcs": [],
@@ -103,28 +103,34 @@
       },
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "xLDTsaCnk"
+          },
           "editorMode": "builder",
           "expr": "process_cpu_seconds_total{instance=\"flask-service.ingress-nginx.svc.cluster.local:5000\"}",
-          "instant": true,
-          "key": "Q-a670126f-46fd-4fe9-9d5e-5d13a6d9e024-0",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "xLDTsaCnk"
+          },
           "editorMode": "builder",
-          "expr": "process_virtual_memory_bytes{instance=\"flask-service.ingress-nginx.svc.cluster.local:5000\"}",
-          "instant": true,
-          "key": "Q-dffe8c30-87b4-4690-b72e-eecfbdb86c19-1",
+          "expr": "process_resident_memory_bytes{instance=\"flask-service.ingress-nginx.svc.cluster.local:5000\"}",
+          "hide": false,
           "legendFormat": "__auto",
           "range": true,
           "refId": "B"
         }
       ],
-      "title": "New Panel",
+      "title": "Panel Title",
       "type": "timeseries"
     }
   ],
+  "refresh": "5s",
   "schemaVersion": 36,
   "style": "dark",
   "tags": [],
@@ -139,6 +145,6 @@
   "timezone": "",
   "title": "Flask",
   "uid": "TaOn4vjnk",
-  "version": 1,
+  "version": 4,
   "weekStart": ""
 }
