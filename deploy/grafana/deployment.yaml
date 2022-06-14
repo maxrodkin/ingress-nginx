@@ -30,6 +30,8 @@ spec:
             - mountPath: /etc/grafana/grafana.ini
               name: grafana-ini
               subPath: grafana.ini.updated
+            - mountPath: /usr/share/grafana/conf/provisioning/dashboards
+              name: dashboards
       restartPolicy: Always
       volumes:
         - emptyDir: {}
@@ -37,4 +39,7 @@ spec:
         - name: grafana-ini
           configMap:
             name: grafana.ini
+        - name: dashboards
+          hostPath:
+            path: /home/ubuntu/ingress-nginx/deploy/grafana/dashboards
 
