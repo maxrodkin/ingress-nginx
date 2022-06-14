@@ -32,6 +32,8 @@ spec:
               subPath: grafana.ini.updated
             - mountPath: /usr/share/grafana/conf/provisioning/dashboards
               name: dashboards
+            - mountPath: /etc/grafana/provisioning/dashboards
+              name: dashboards
       restartPolicy: Always
       volumes:
         - emptyDir: {}
